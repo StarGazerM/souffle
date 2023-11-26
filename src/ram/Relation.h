@@ -118,7 +118,7 @@ protected:
     }
 
     void print_sexpr(std::ostream& out) const override {
-        out << "(RELATION " << name;
+        out << "(RELATION " << name << " (";
         if (arity > 0) {
             out << " (ATTRIBUTE " << attributeNames[0] << " " << attributeTypes[0] << ")";
             for (std::size_t i = 1; i < arity; i++) {
@@ -131,8 +131,9 @@ protected:
             out << ")";
             out << " " << representation;
         } else {
-            out << " ()";
+            out << " () ";
         }
+        out << ")";
     }
 
     bool equal(const Node& node) const override {

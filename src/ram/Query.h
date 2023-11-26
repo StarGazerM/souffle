@@ -70,7 +70,7 @@ protected:
     }
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
-        os << times(" ", tabpos) << "(" << "QUERY" << std::endl;
+        os << "(" << "QUERY" << std::endl;
         operation->print_sexpr(os, tabpos + 1);
         os << times(" ", tabpos) << ")" << std::endl;
     }

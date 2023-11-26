@@ -131,12 +131,13 @@ protected:
             out << "    " << *rel << "\n";
         }
         out << "  )\n";
+        out << "(";
         for (const auto& sub : subroutines) {
             out << "  (SUBROUTINE " << sub.first << "\n";
             sub.second->print_sexpr(out, 4);
             out << "  )\n";
         }
-        out << "  (MAIN \n";
+        out << ")\n  (MAIN \n";
         main->print_sexpr(out, 4);
         out << "  )\n";
         out << ")";

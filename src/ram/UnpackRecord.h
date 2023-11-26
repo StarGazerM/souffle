@@ -80,7 +80,7 @@ protected:
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
         os << "(UNPACK t" << getTupleId() << " " << arity << " " << *expression << "\n";
-        NestedOperation::print(os, tabpos + 1);
+        NestedOperation::print_sexpr(os, tabpos + 1);
         os << ")";
     }
 

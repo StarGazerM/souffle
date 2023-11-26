@@ -130,7 +130,7 @@ public:
     }
 
     void printIndexSexpr(std::ostream& os) const {
-        os << "(INDICES ";
+        os << "(INDEX ";
         for (std::size_t i = 0; i < queryPattern.first.size(); ++i) {
             // early exit if no upper/lower bounds are defined
             if (isUndefValue(queryPattern.first[i].get()) && isUndefValue(queryPattern.second[i].get())) {
@@ -143,7 +143,7 @@ public:
                 // print equality when lower bound = upper bound
                 if (*(queryPattern.first[i]) == *(queryPattern.second[i])) {
                     os << "(= ";
-                    os << "(T t" << getTupleId() << " ";
+                    os << "(TUPLE t" << getTupleId() << " ";
                     os << i << ") ";
                     os << *(queryPattern.first[i]);
                     os << ")";
@@ -157,7 +157,7 @@ public:
                     os << *(queryPattern.first[i]) << " ";
                 }
 
-                os << "(T t" << getTupleId() << " ";
+                os << "(TUPLE t" << getTupleId() << " ";
                 os << i;
                 os << ") ";
 

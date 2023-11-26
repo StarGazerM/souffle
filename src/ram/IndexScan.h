@@ -75,7 +75,7 @@ protected:
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
-        os << "(FOR t" << getTupleId() << " " << relation;
+        os << "(FOR t" << getTupleId() << " " << relation << " ";
         printIndexSexpr(os);
         os << std::endl;
         IndexOperation::print_sexpr(os, tabpos + 1);

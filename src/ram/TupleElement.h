@@ -58,7 +58,7 @@ protected:
     }
 
     void print_sexpr(std::ostream& os) const override {
-        os << "(TUPLE " << identifier << " " << element << ")";
+        os << "(TUPLE t" << identifier << " " << element << ")";
     }
 
     bool equal(const Node& node) const override {

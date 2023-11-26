@@ -59,9 +59,9 @@ protected:
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
-        os << "(FOR_IN t" << getTupleId();
-        os << " " << relation << ")" << std::endl;
+        os << "(FOR_IN t" << getTupleId() << " " << relation << " " ;
         RelationOperation::print_sexpr(os, tabpos + 1);
+        os << ")" << std::endl;
     }
 };
 

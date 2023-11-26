@@ -91,6 +91,7 @@ protected:
         }
         os << std::endl;
         RelationOperation::print_sexpr(os, tabpos + 1);
+        os << ")";
     }
 
     bool equal(const Node& node) const override {

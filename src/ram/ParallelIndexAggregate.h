@@ -80,7 +80,7 @@ protected:
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
-        os << "(PARALLEL_INDEX_AGGREGATE (= (T t" << getTupleId() << " 0) ";
+        os << "(PARALLEL_INDEX_AGGREGATE (= (TUPLE t" << getTupleId() << " 0) ";
         AbstractAggregate::print_sexpr(os, tabpos);
         os << ") ";
         os << " t" << getTupleId() << " " << relation;
