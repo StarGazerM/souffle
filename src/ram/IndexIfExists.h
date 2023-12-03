@@ -96,11 +96,11 @@ protected:
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
-        os << "(INDEXED_IF_EXISTS t" << getTupleId() << " " << relation;
+        os << "(INDEXED_IF_EXISTS t" << getTupleId() << " " << relation << " ";
         printIndexSexpr(os);
         os << " " << getCondition();
         os << std::endl;
-        IndexOperation::print(os, tabpos + 1);
+        IndexOperation::print_sexpr(os, tabpos + 1);
         os << ")";
     }
 
