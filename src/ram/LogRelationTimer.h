@@ -72,7 +72,7 @@ protected:
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos) << "(TIMER_ON " << relation << " \"" << stringify(message) << "\"";
         os << std::endl;
-        Statement::print(statement.get(), os, tabpos + 1);
+        Statement::print_sexpr(statement.get(), os, tabpos + 1);
         os << times(" ", tabpos) << ")" << std::endl;
     }
 
