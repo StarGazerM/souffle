@@ -82,7 +82,7 @@ protected:
         os << " " << relation;
         os << " " << getCondition() << " ";
         os << std::endl;
-        RelationOperation::print(os, tabpos + 1);
+        RelationOperation::print_sexpr(os, tabpos + 1);
         os << ")";
     }
 

@@ -83,7 +83,7 @@ protected:
     }
 
     void print_sexpr(std::ostream& os, int tabpos) const {
-        os << "(AGGRAGTE_FUNCTION ";
+        os << "(AGGREGATE_FUNCTION ";
         function->print_sexpr(os, tabpos);
         os << " ";
         if (expression) {

@@ -85,8 +85,8 @@ protected:
     }
 
     void print_sexpr(std::ostream& os) const override {
-        os << "(USER_FUNCTOR " << name << "_" << argsTypes;
-        os << "_" << returnType;
+        os << "(USER_FUNCTOR " << "\"" << name << "_" << argsTypes;
+        os << "_" << returnType << "\" ";
         if (stateful) {
             os << " TRUE ";
         } else {

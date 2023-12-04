@@ -80,7 +80,7 @@ protected:
 
     void print_sexpr(std::ostream& os, int tabpos) const override {
         os << times(" ", tabpos);
-        os << "(AGGRAGTE " << "t" <<  getTupleId() << " ";
+        os << "(AGGREGATE " << "t" <<  getTupleId() << " ";
         AbstractAggregate::print(os, tabpos);
         os << " t" <<  getTupleId();
         os << " " << getRelation();
