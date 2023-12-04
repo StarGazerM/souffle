@@ -56,6 +56,13 @@ protected:
         os << " IN " << relation << std::endl;
         RelationOperation::print(os, tabpos + 1);
     }
+
+    void print_sexpr(std::ostream& os, int tabpos) const override {
+        os << times(" ", tabpos);
+        os << "(FOR_IN t" << getTupleId() << " " << relation << " " ;
+        RelationOperation::print_sexpr(os, tabpos + 1);
+        os << ")" << std::endl;
+    }
 };
 
 }  // namespace souffle::ram
